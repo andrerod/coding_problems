@@ -20,20 +20,17 @@ namespace CodingProblems
         {
             MinHeap<GraphEdge<string>> minDistances = new MinHeap<GraphEdge<string>>();
             var distances = new Dictionary<string, GraphEdge<string>>();
-            List<string> nodesToVisit = new List<string>();
 
             foreach (var node in Vertices)
             {
                 var edge = new GraphEdge<string> { Node = node.Key, Distance = node.Key == origin ? 0 : int.MaxValue };
                 minDistances.Add(edge);
                 distances.Add(node.Key, edge);
-                nodesToVisit.Add(node.Key);
             }
 
-            while (nodesToVisit.Count != 0)
+            while (minDistances.Length > 0)
             {
                 var currentNode = minDistances.PopMin();
-                nodesToVisit.Remove(currentNode.Node);
 
                 if (currentNode.Node == destination)
                 {

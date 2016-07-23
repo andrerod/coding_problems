@@ -5,7 +5,16 @@ namespace CodingProblems
 {
     public class MinHeap<T> where T : IComparable
     {
-        List<T> elements;
+        private List<T> elements;
+
+        public int Length
+        {
+            get
+            {
+                return elements.Count;
+            }
+        }
+
 
         public MinHeap()
         {

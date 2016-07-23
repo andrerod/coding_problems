@@ -44,5 +44,24 @@
 
             return node;
         }
+
+        public static bool DetectLoops(Node node)
+        {
+            var slowIterator = node;
+            var fastIterator = node;
+
+            while (fastIterator != null && fastIterator.Next != null)
+            {
+                slowIterator = slowIterator.Next;
+                fastIterator = fastIterator.Next.Next;
+
+                if (slowIterator == fastIterator)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
     }
 }

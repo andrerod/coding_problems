@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodingProblems", "CodingPro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodingProblemsTests", "CodingProblemsTests\CodingProblemsTests.csproj", "{52ED5AA6-471B-41BC-B29E-9A57BDCC2BAB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary2", "LeetCode\ClassLibrary2.csproj", "{53508F61-CAFF-4DFA-AC3D-1927D22EC51F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{52ED5AA6-471B-41BC-B29E-9A57BDCC2BAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52ED5AA6-471B-41BC-B29E-9A57BDCC2BAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52ED5AA6-471B-41BC-B29E-9A57BDCC2BAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53508F61-CAFF-4DFA-AC3D-1927D22EC51F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53508F61-CAFF-4DFA-AC3D-1927D22EC51F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53508F61-CAFF-4DFA-AC3D-1927D22EC51F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53508F61-CAFF-4DFA-AC3D-1927D22EC51F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

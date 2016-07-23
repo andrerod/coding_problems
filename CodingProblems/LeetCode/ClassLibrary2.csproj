@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D949E51A-64BE-4034-930C-D7CB327364D4}</ProjectGuid>
+    <ProjectGuid>{53508F61-CAFF-4DFA-AC3D-1927D22EC51F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CodingProblems</RootNamespace>
-    <AssemblyName>CodingProblems</AssemblyName>
+    <RootNamespace>ClassLibrary2</RootNamespace>
+    <AssemblyName>ClassLibrary2</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,16 +22,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,37 +40,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AStar.cs" />
-    <Compile Include="AStarMine.cs" />
-    <Compile Include="AStartBetter.cs" />
-    <Compile Include="Chapter1.cs" />
-    <Compile Include="Chapter16.cs" />
-    <Compile Include="Chapter17.cs" />
-    <Compile Include="Chapter2.cs" />
-    <Compile Include="Chapter4.cs" />
-    <Compile Include="Chapter5.cs" />
-    <Compile Include="Chapter6.cs" />
-    <Compile Include="Graph.cs" />
-    <Compile Include="GraphEdge.cs" />
-    <Compile Include="GraphMine.cs" />
-    <Compile Include="KThSmallestElementInTree.cs" />
-    <Compile Include="MaxHeap.cs" />
-    <Compile Include="MazeLocation.cs" />
-    <Compile Include="MazeShortestPath.cs" />
-    <Compile Include="MergeSort.cs" />
-    <Compile Include="MinHeap.cs" />
-    <Compile Include="MinString.cs" />
-    <Compile Include="Node.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QuickSort.cs" />
-    <Compile Include="QuickSortNew.cs" />
-    <Compile Include="SegmentString.cs" />
-    <Compile Include="SnapChatInterview.cs" />
-    <Compile Include="TreeNode.cs" />
-    <Compile Include="Trie.cs" />
+    <Compile Include="Calculator.cs" />
+    <Compile Include="Candy.cs" />
+    <Compile Include="EditDistance.cs" />
+    <Compile Include="FindDuplicateNumber.cs" />
+    <Compile Include="FirstMissingPositive.cs" />
+    <Compile Include="GenerateParentheses.cs" />
+    <Compile Include="InterleavingString.cs" />
+    <Compile Include="InvalidParentheses.cs" />
+    <Compile Include="LongestConsecutive.cs" />
+    <Compile Include="MaximumNumber.cs" />
+    <Compile Include="MaximumSumBinaryTree.cs" />
+    <Compile Include="MedianTwoSortedArrays.cs" />
+    <Compile Include="MergeArrays.cs" />
+    <Compile Include="MinimumWindowSubstring.cs" />
+    <Compile Include="NumberCombinations.cs" />
+    <Compile Include="PalindromePairs.cs" />
+    <Compile Include="Problem214.cs" />
+    <Compile Include="RegularExpressionMatching.cs" />
+    <Compile Include="RemoveDuplicateLetters.cs" />
+    <Compile Include="SubstringWithConcatenation.cs" />
+    <Compile Include="SudokuSolver.cs" />
+    <Compile Include="TextJustification.cs" />
+    <Compile Include="ValidParentheses.cs" />
+    <Compile Include="WildcardMatching.cs" />
+    <Compile Include="WordLadder.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <Folder Include="Properties\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

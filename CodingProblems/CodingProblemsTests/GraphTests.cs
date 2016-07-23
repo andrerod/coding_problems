@@ -61,5 +61,17 @@ namespace CodingProblemsTests
             var distance = mazeSolver.ShortestPath(0, 0, 0, 9);
             Assert.AreEqual(13, distance);
         }
+
+        [TestMethod]
+        public void AStarShortestPathTests()
+        {
+            int[,] maze = new int[10, 10];
+            maze[0, 3] = 1;
+            maze[1, 3] = 1;
+
+            AStarMine mazeSolver = new AStarMine(maze);
+            var distance = mazeSolver.ShortestDistance(0, 0, 0, 9);
+            Assert.AreEqual(13, distance);
+        }
     }
 }

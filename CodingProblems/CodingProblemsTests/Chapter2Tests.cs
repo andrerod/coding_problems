@@ -39,5 +39,53 @@ namespace CodingProblemsTests
             Assert.IsFalse(newNode.Contains(1));
             Assert.IsTrue(newNode.Contains(2));
         }
+
+        [TestMethod]
+        public void DetectLoopsTest()
+        {
+            Node nodes = new Node
+            {
+                Value = 1,
+                Next = new Node
+                {
+                    Value = 2,
+                    Next = new Node
+                    {
+                        Value = 3,
+                        Next = new Node
+                        {
+                            Value = 4
+                        }
+                    }
+                }
+            };
+
+            nodes.Next.Next.Next.Next = nodes;
+
+            Assert.IsTrue(Chapter2.DetectLoops(nodes));
+        }
+
+        [TestMethod]
+        public void DetectNoLoopsTest()
+        {
+            Node nodes = new Node
+            {
+                Value = 1,
+                Next = new Node
+                {
+                    Value = 2,
+                    Next = new Node
+                    {
+                        Value = 3,
+                        Next = new Node
+                        {
+                            Value = 4
+                        }
+                    }
+                }
+            };
+
+            Assert.IsFalse(Chapter2.DetectLoops(nodes));
+        }
     }
 }

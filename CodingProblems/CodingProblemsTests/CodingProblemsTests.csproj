@@ -53,14 +53,23 @@
     <Compile Include="Chapter2Tests.cs" />
     <Compile Include="Chapter1Tests.cs" />
     <Compile Include="Chapter4Tests.cs" />
+    <Compile Include="Chapter17Tests.cs" />
     <Compile Include="Chapter5Tests.cs" />
+    <Compile Include="FindKthSmallestElementTests.cs" />
     <Compile Include="GraphTests.cs" />
+    <Compile Include="LeetCodeTests.cs" />
+    <Compile Include="MinStringTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SnapchatInterviewTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CodingProblems\CodingProblems.csproj">
       <Project>{d949e51a-64be-4034-930c-d7cb327364d4}</Project>
       <Name>CodingProblems</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeetCode\ClassLibrary2.csproj">
+      <Project>{53508f61-caff-4dfa-ac3d-1927d22ec51f}</Project>
+      <Name>ClassLibrary2</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

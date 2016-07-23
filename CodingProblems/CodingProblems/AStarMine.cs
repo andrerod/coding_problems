@@ -1,21 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace CodingProblems
 {
-    public class MazeShortestPath
+    public class AStarMine
     {
         public int[,] Maze { get; set; }
 
-        public MazeShortestPath(int [,] maze)
+        public AStarMine(int[,] maze)
         {
             Maze = maze;
         }
 
-        public int ShortestPath(int startX, int startY, int endX, int endY)
+        public int EstimateCost(int startX, int startY, int endX, int endY)
         {
-            GraphEdge<Tuple<int, int>>[,] distances = new GraphEdge<Tuple<int, int>>[Maze.GetLength(0), Maze.GetLength(1)];
-            var minDistances = new MinHeap<GraphEdge<Tuple<int, int>>>();
+            return Math.Abs(endY - startY) + Math.Abs(endX - startX);
+        }
+
+        public int ShortestDistance(int startX, int startY, int endX, int endY)
+        {
+            MazeLocation<Tuple<int, int>>[,] locations = new MazeLocation<Tuple<int, int>>[Maze.GetLength(0), Maze.GetLength(1)];
+            var minDistances = new MinHeap<MazeLocation<Tuple<int, int>>>();
 
             for (int i = 0; i < Maze.GetLength(0); i++)
             {
@@ -24,14 +30,16 @@ namespace CodingProblems
                     if (Maze[i, j] == 0)
                     {
                         var node = new Tuple<int, int>(i, j);
-                        var distance = 0;
-                        if (i != startX || j != startY)
+                        var gscore = int.MaxValue;
+                        var fscore = int.MaxValue;
+                        if (i == startX && j == startY)
                         {
-                            distance = int.MaxValue;
+                            gscore = 0;
+                            fscore = EstimateCost(startX, startY, endX, endY);
                         }
 
-                        distances[i, j] = new GraphEdge<Tuple<int, int>> { Node = node, Distance = distance };
-                        minDistances.Add(distances[i, j]);
+                        locations[i, j] = new MazeLocation<Tuple<int, int>> { Node = node, GScore = gscore, FScore = fscore };
+                        minDistances.Add(locations[i, j]);
                     }
                 }
             }
@@ -42,22 +50,26 @@ namespace CodingProblems
 
                 if (currentNode.Node.Item1 == endX && currentNode.Node.Item2 == endY)
                 {
-                    return currentNode.Distance;
+                    return currentNode.GScore;
                 }
 
-                if (currentNode.Distance == int.MaxValue)
+                if (currentNode.GScore == int.MaxValue)
                 {
                     return int.MaxValue;
                 }
 
                 foreach (var adjacent in GetAdjacentCoordinates(currentNode.Node.Item1, currentNode.Node.Item2, Maze.GetLength(0), Maze.GetLength(1)))
                 {
-                    var newDistance = currentNode.Distance + 1;
-                    if (distances[adjacent.Item1, adjacent.Item2] != null && newDistance < distances[adjacent.Item1, adjacent.Item2].Distance)
+                    if (locations[adjacent.Item1, adjacent.Item2] != null)
                     {
-                        distances[adjacent.Item1, adjacent.Item2].Distance = newDistance;
+                        var newDistance = currentNode.GScore + 1;
+                        if (newDistance < locations[adjacent.Item1, adjacent.Item2].GScore)
+                        {
+                            locations[adjacent.Item1, adjacent.Item2].GScore = newDistance;
+                            locations[adjacent.Item1, adjacent.Item2].FScore = newDistance + EstimateCost(adjacent.Item1, adjacent.Item2, endX, endY);
 
-                        minDistances.Heapify();
+                            minDistances.Heapify();
+                        }
                     }
                 }
             }
@@ -88,4 +100,4 @@ namespace CodingProblems
             return adjacent;
         }
     }
-}
+    }
