@@ -61,6 +61,7 @@
     <Compile Include="RemoveDuplicateLetters.cs" />
     <Compile Include="SubstringWithConcatenation.cs" />
     <Compile Include="SudokuSolver.cs" />
+    <Compile Include="SuroundedRegions.cs" />
     <Compile Include="TextJustification.cs" />
     <Compile Include="ValidParentheses.cs" />
     <Compile Include="WildcardMatching.cs" />

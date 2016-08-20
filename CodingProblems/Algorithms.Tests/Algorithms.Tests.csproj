@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{570DF244-8F91-48DD-B68A-25554C6EE581}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Algorithms.Tests</RootNamespace>
+    <AssemblyName>Algorithms.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Numerics" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
+      <Visible>False</Visible>
+    </CodeAnalysisDependentAssemblyPaths>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnagramTests.cs" />
+    <Compile Include="BinarySearchTests.cs" />
+    <Compile Include="BinarySearchTreeTests.cs" />
+    <Compile Include="CelebrityTests.cs" />
+    <Compile Include="CircularLinkedListTests.cs" />
+    <Compile Include="ContinuousRegionTests.cs" />
+    <Compile Include="IteratorTests.cs" />
+    <Compile Include="MajorityTests.cs" />
+    <Compile Include="Read4kTests.cs" />
+    <Compile Include="SortTests.cs" />
+    <Compile Include="DynamicProgrammingTests.cs" />
+    <Compile Include="GraphTests.cs" />
+    <Compile Include="BackTrackingTests.cs" />
+    <Compile Include="IntegerPartitionTests.cs" />
+    <Compile Include="LinkedListTests.cs" />
+    <Compile Include="MathTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueueWithTwoStacksTests.cs" />
+    <Compile Include="ArrayTests.cs" />
+    <Compile Include="ShortestPathTests.cs" />
+    <Compile Include="StringTests.cs" />
+    <Compile Include="StackTests.cs" />
+    <Compile Include="BinaryTreeTests.cs" />
+    <Compile Include="PriorityQueueTests.cs" />
+    <Compile Include="NearestPointsTests.cs" />
+    <Compile Include="BitsTests.cs" />
+    <Compile Include="TrieTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Algorithms.Implementation\Algorithms.Implementation.csproj">
+      <Project>{936193CD-1B32-4373-8BE8-688865BC1721}</Project>
+      <Name>Algorithms.Implementation</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
