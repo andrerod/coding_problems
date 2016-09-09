@@ -46,6 +46,7 @@
     <Compile Include="FindDuplicateNumber.cs" />
     <Compile Include="FirstMissingPositive.cs" />
     <Compile Include="GenerateParentheses.cs" />
+    <Compile Include="Graph.cs" />
     <Compile Include="InterleavingString.cs" />
     <Compile Include="InvalidParentheses.cs" />
     <Compile Include="LongestConsecutive.cs" />
@@ -69,6 +70,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Algorithms.Implementation\Algorithms.Implementation.csproj">
+      <Project>{936193CD-1B32-4373-8BE8-688865BC1721}</Project>
+      <Name>Algorithms.Implementation</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

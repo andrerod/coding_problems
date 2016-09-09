@@ -1,4 +1,5 @@
-﻿using CodingProblems;
+﻿using ClassLibrary2;
+using CodingProblems;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
@@ -8,6 +9,20 @@ namespace CodingProblemsTests
     [TestClass]
     public class GraphTests
     {
+        [TestMethod]
+        public void TopoTest()
+        {
+            var res = GraphAlgorithms.TopologicalSort();
+            Assert.AreEqual(3, res.Count);
+        }
+
+        [TestMethod]
+        public void ShortestPathTest()
+        {
+            var res = GraphAlgorithms.ShortestPath(new[] { 1, 2, 3, 5, 1, 1, 1, 1, 1 });
+            Assert.AreEqual(4, res.Count);
+        }
+
         [TestMethod]
         public void ShortestPathTests()
         {
